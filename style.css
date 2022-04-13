@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body , html{
+    height: 100%;
+    /* background-color: lightpink; */
+}
+.outer{
+    height:100%;
+    background-color:pink;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+}
+.outer > header{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+.outer header h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer header .plus{
+    cursor: pointer;
+    border: 1px solid black;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightyellow;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    font-size: 25px;
+    font-weight:bolder;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.outer footer{
+    margin-top: auto;
+    height: 50px;
+    background-color:skyblue;
+   
+}
+.outer main{
+    display: grid;
+    height:calc(100% - 100px);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 10px;
+    overflow-y: auto;
+}
+.outer main .todo{
+    
+    background-color:salmon ;
+    height: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.outer main .todo header{
+    position: relative;
+height: 30px;
+background-color: skyblue ;
+border-radius: 10px 10px 0 0;
+display: flex;
+align-items: center;
+border: 1px solid black;
+}
+.outer main .todo header span{
+    margin-left: 10px;
+}
+.todo .todo-text{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20px; */
+}
+.todo .todo-text textarea{
+    display: flex;
+    align-items: center;
+    justify-content: center;         
+    height: 85%;
+    width: 87%;
+    border: none;
+}
+/* .outer .dialogbox {
+    position:absolute;
+    left: 150px;
+    top:20px;
+    height: 600px;
+    width: 1000px;
+    background-color: burlywood; */
+    /* position: relative; */
+/* } 
+.outer .dialogbox .header header{
+    background-color: crimson;
+}  */
+
+.dialog-box {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.313);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index:100;    
+}
+
+body .dialog-box .innerdbox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 600px;
+    background-color: lightcyan;
+    border: 2px solid seagreen;
+    border-radius: 20px;
+}
+
+body .innerdbox .innerdbox ,.x1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width:50px;
+    height:30px;
+    color: white;
+    background-color: seagreen;
+    border-radius: 30px;
+    right: -30px;
+    top:-30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+body .dialog-box .dheading{
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    width: 40%;
+    text-align: center;
+    background-color: seagreen;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    
+}
+body .dialog-box .innerdbox .titext{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+body .dialog-box .innerdbox .titext label{
+    color: black;
+    text-shadow:0 0 5px rgba(0,0,0,0.5);
+    font-weight: bolder;
+    font-size: larger;
+    margin-bottom:5px ;
+}
+body .dialog-box .innerdbox .tadis  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+body .dialog-box .innerdbox .tadis label{
+    margin-bottom: 5px;
+    color: black;
+    text-shadow:0 0 5px rgba(0,0,0,0.5);
+    font-weight: bolder;
+    font-size: larger;
+}
+body .dialog-box .innerdbox .titext input{
+    margin-bottom: 20px;
+    background-color: lightcyan;
+    border-radius: 10px;
+    border: 1px solid seagreen;
+    color: black;
+    height: 25px;
+    width: 200px;   
+    padding: 5px;
+    
+}
+body .dialog-box .innerdbox .tadis textarea{
+    margin-bottom: 20px;
+    background-color: lightcyan;
+    border-radius: 10px;
+    border: 1px solid seagreen;
+    color: black;
+    height: 25px;
+    width: 200px;   
+}
+body .dialog-box .innerdbox .button1 button{
+    background-color: seagreen;
+    width: 200px;
+    color: lightcyan;
+    padding: 5px;   
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main header .close{
+    position: absolute;
+    right: 10px;
+    background-color: salmon;
+    color: white;
+    height: 20px;
+    width: 35px;
+    border-radius: 30%;
+    text-align: center;
+    cursor: pointer;
+    /* padding: 3px;    */
+} 
+main header .minimize{
+    position: absolute;
+    right: 50px;
+    background-color:blue ;
+    color: white;
+       height: 22px;
+       width:35px; 
+       text-align: center;
+    /* padding: 4px; */
+    cursor: pointer;
+    border-radius: 30%;
+} 
+ 
+
